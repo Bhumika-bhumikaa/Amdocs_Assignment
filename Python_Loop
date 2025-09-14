@@ -1,0 +1,97 @@
+---------------------Python--Loop-----------------------------
+
+#1. Print even numbers (10–20) without loop using range()
+print(*range(10, 21, 2))
+
+#2. Simulate do-while loop (ask until 0 entered)
+while True:
+    num = int(input("Enter a positive number (0 to stop): "))
+    if num == 0:
+        break
+
+#3. Factorial using while loop
+num = int(input("Enter a number: "))
+factorial = 1
+i = 1
+
+while i <= num:
+    factorial *= i
+    i += 1
+
+print(f"Factorial of {num} is {factorial}")
+
+#4. Grade assignment using nested if-else
+score = int(input("Enter score: "))
+
+if score > 90:
+    grade = "A"
+else:
+    if score > 80:
+        grade = "B"
+    else:
+        if score > 70:
+            grade = "C"
+        else:
+            if score > 60:
+                grade = "D"
+            else:
+                grade = "F"
+
+print("Grade:", grade)
+
+#5. Day of the week using match-case
+
+num = int(input("Enter a number (1-7): "))
+
+match num:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("Invalid input")
+
+#6. Student scores list management
+scores = []
+
+scores.extend([85, 90, 78, 92, 88])
+
+scores.insert(2, 80)
+
+scores.remove(92)
+
+scores.sort()
+
+scores.reverse()
+
+
+print("Maximum:", max(scores))
+print("Minimum:", min(scores))
+
+print("Is 90 in the list?", 90 in scores)
+
+print("Total scores:", len(scores))
+
+print("First three scores:", scores[:3])
+
+print("All scores:")
+for s in scores:
+    print(s)
+
+print("Last element:", scores[-1])
+
+scores[2] = 95
+print("Updated list:", scores)
+
+copied_scores = scores.copy()
+print("Copied list:", copied_scores)
