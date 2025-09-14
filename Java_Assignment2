@@ -1,0 +1,55 @@
+class Student {
+    String name;
+    int age;
+    char section;
+    char gender;
+    int sub1, sub2, sub3;
+
+    Student(String name, int age, char section, char gender, int sub1, int sub2, int sub3) {
+        this.name = name;
+        this.age = age;
+        this.section = section;
+        this.gender = gender;
+        this.sub1 = sub1;
+        this.sub2 = subt2;
+        this.sub3 = sub3;
+    }
+
+    int getMarks() {
+        return sub1 + sub2 + sub3;
+    }
+
+    double getPercentage() {
+        return getMarks() / 3.0;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Section: " + section);
+        System.out.println("Gender: " + gender);
+        System.out.println("Subject 1: " + sub1);
+        System.out.println("Subject 2: " + sub2);
+        System.out.println("Subject 3: " + sub3);
+        System.out.println("Total Marks: " + getlMarks());
+        System.out.println("Percentage: " + getPercentage() + "%");
+    }
+}
+
+public class MainStudent {
+    public static void main(String[] args) {
+
+        Student s1 = new Student("s1", 20, 'A', 'M', 67, 98, 76);
+
+        Student s2 = new Student("s2", 21, 'B', 'F', 0, 33, 45);
+
+        Student s3 = new Student("s3", 22, 'C', 'F', 0, 54, 50);
+
+        Student s4 = new Student("s4", 23, 'D', 'F', 32,77, 69);
+
+        s1.display();
+        s2.display();
+        s3.display();
+        s4.display();
+    }
+}
